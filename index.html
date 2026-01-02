@@ -1,44 +1,118 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <title>Justin Du</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-
+<head>
+  <title>Justin Du</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Blinking cursor style */
+    #typewriter::after {
+      content: '|';
+      animation: blink 0.7s infinite;
+    }
     
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
 <body>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="qualifications.html">Qualifications</a>
-  <a href="https://drive.google.com/file/d/178G9ou-skgP2t8Orrd4O3j0AGaWp7pd1/view?usp=sharing" target="_blank">Resume</a>
-  <a href="service.html">Service</a>
-
-  <div class="dropdown">
-    <span class="dropbtn">Contact</span>
-    <div class="dropdown-content">
-      <a href="mailto:justindu112121@tamu.edu">Email</a>
-      <a href="https://linkedin.com/in/justin-du-tamu/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/JustinDuIt" target="_blank">GitHub</a>
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="qualifications.html">Qualifications</a>
+    <a href="https://drive.google.com/file/d/178G9ou-skgP2t8Orrd4O3j0AGaWp7pd1/view?usp=sharing" target="_blank">Resume</a>
+    <a href="service.html">Service</a>
+    <div class="dropdown">
+      <span class="dropbtn">Contact</span>
+      <div class="dropdown-content">
+        <a href="mailto:justindu112121@tamu.edu">Email</a>
+        <a href="https://linkedin.com/in/justin-du-tamu/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JustinDuIt" target="_blank">GitHub</a>
+      </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
   <main>
     <header class="hero">
       <h1>Howdy, I'm Justin Du</h1>
-      <p>Computer Engineer</p>
-      <p>Texas A&M University</p>
       <img src="images/fine-guy.jpg" alt="Photo of Justin Du">
     </header>
-
+    <!-- ===== Animated Text ===== -->
     <section>
-      <h3>
-        I am a Computer Engineering student at Texas A&M University...
-      </h3>
+      <h3 id="typewriter"></h3>
     </section>
   </main>
+  <!-- ===== Typewriter Script ===== -->
+  <script>
+    const text1 = "I am Justin Du";
+    const text2 = "I am a computer engineering student at Texas A&M University";
+    const text3 = "I am an incoming manufacturing intern at Collins Aerospace";
+    const element = document.getElementById("typewriter");
+    let index = 0;
+    let phase = 0;
+    
+    function typeEffect() {
+      if (phase === 0) {
+        // Typing text1
+        element.textContent = text1.slice(0, index++);
+        if (index > text1.length) {
+          setTimeout(() => {
+            phase = 1;
+            typeEffect();
+          }, 1500);
+          return;
+        }
+      } 
+      else if (phase === 1) {
+        // Deleting back to "I am "
+        element.textContent = text1.slice(0, --index);
+        if (index === 5) {
+          phase = 2;
+        }
+      } 
+      else if (phase === 2) {
+        // Typing text2
+        element.textContent = text2.slice(0, index++);
+        if (index > text2.length) {
+          setTimeout(() => {
+            phase = 3;
+            typeEffect();
+          }, 2000);
+          return;
+        }
+      }
+      else if (phase === 3) {
+        // Deleting back to "I am "
+        element.textContent = text2.slice(0, --index);
+        if (index === 5) {
+          phase = 4;
+        }
+      }
+      else if (phase === 4) {
+        // Typing text3
+        element.textContent = text3.slice(0, index++);
+        if (index > text3.length) {
+          setTimeout(() => {
+            phase = 5;
+            typeEffect();
+          }, 2000);
+          return;
+        }
+      }
+      else if (phase === 5) {
+        // Deleting text3 completely
+        element.textContent = text3.slice(0, --index);
+        if (index === 0) {
+          phase = 0;
+          index = 0;
+        }
+      }
+      
+      setTimeout(typeEffect, 70);
+    }
+    
+    typeEffect();
+  </script>
 </body>
-
 </html>
