@@ -1,22 +1,159 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  background-color: #f6f7f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: #500000;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Page Container ===== */
+main {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* ===== Headers ===== */
 header {
   text-align: center;
   margin-bottom: 60px;
 }
 
-section {
-  margin-bottom: 50px;
-}
-
 h1 {
-  font-size: 36px;
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
 h2 {
+  color: #500000;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+/* ===== Hero Section ===== */
+.hero img {
+  width: 180px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* ===== Cards ===== */
+section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  margin-bottom: 40px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ===== Contact Page ===== */
+.contact-info h1 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* ===== Footer spacing fix ===== */
+footer {
+  height: 60px;
+}
+
+/* ===== Dropdown Contact Menu ===== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+  font-weight: 600;
+  color: #500000;
+  padding: 10px 0;
+}
+
+/* Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;              /* directly below Contact */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  min-width: 170px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 200;
+}
+
+/* Links */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Hover effects */
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* IMPORTANT PART — keeps menu open */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.project-icon i {
+  font-size: 52px;
   color: #500000; /* TAMU maroon */
-  margin-bottom: 10px;
+}
+.project-content h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #000;
+}
+
+.project-content p {
+  color: #000;
 }

@@ -1,25 +1,105 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
 
-<html>
-    <head>
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 
-    <body>
-        <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="qualifications.html">Qualifications</a>
-                <a href="https://drive.google.com/file/d/178G9ou-skgP2t8Orrd4O3j0AGaWp7pd1/view?usp=sharing" target="_blank">Resume</a>
-                <a href="service.html">Service</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
 
+<body>
 
-        </header>
- 
-    </body>
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="qualifications.html">Qualifications</a>
+    <a href="https://drive.google.com/file/d/178G9ou-skgP2t8Orrd4O3j0AGaWp7pd1/view?usp=sharing" target="_blank">Resume</a>
+    <a href="service.html">Service</a>
 
+    <div class="dropdown">
+      <span class="dropbtn">Contact</span>
+      <div class="dropdown-content">
+        <a href="mailto:justindu112121@tamu.edu">Email</a>
+        <a href="https://linkedin.com/in/justin-du-tamu/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JustinDuIt" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Main Content ===== -->
+  <main>
+
+    <h1>My Projects</h1>
+
+    <!-- ===== Tiny FS ===== -->
+    <section class="project">
+      <div class="project-icon">
+        <i class="fa-solid fa-folder"></i>
+      </div>
+
+      <div class="project-content">
+        <h2>Tiny File System</h2>
+        <p>
+          Block-based file system simulator in Python using 64-byte blocks and a
+          128-block virtual disk. Supports core commands such as mkdir, cd, ls,
+          and pwd.
+        </p>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>File Systems</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Arduino Pill Dispenser ===== -->
+    <section class="project">
+      <div class="project-icon">
+        <i class="fa-solid fa-pills"></i>
+      </div>
+
+      <div class="project-content">
+        <h2>Arduino Pill Dispenser</h2>
+        <p>
+          Automated pill dispenser built with an Arduino Uno, gear motor, and
+          button interface to dispense medication at controlled intervals.
+        </p>
+
+        <div class="tags">
+          <span>Arduino</span>
+          <span>Embedded Systems</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Electronic Security System ===== -->
+    <section class="project">
+      <div class="project-icon">
+        <i class="fa-solid fa-microchip"></i>
+      </div>
+
+      <div class="project-content">
+        <h2>Electronic Security System</h2>
+        <p>
+          Hardware-based security system using digital logic and
+          microcontroller concepts to monitor and control secure access.
+        </p>
+
+        <div class="tags">
+          <span>Digital Logic</span>
+          <span>Hardware Security</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
 </html>
