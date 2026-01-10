@@ -7,7 +7,7 @@
     
     function typeEffect() {
       if (phase === 0) {
-        // Typing text1
+        // typing text1
         element.textContent = text1.slice(0, index++);
         if (index > text1.length) {
           setTimeout(() => {
@@ -18,14 +18,14 @@
         }
       } 
       else if (phase === 1) {
-        // Deleting back to "I am "
+        // deleting back to "I am "
         element.textContent = text1.slice(0, --index);
         if (index === 5) {
           phase = 2;
         }
       } 
       else if (phase === 2) {
-        // Typing text2
+        // typing text2
         element.textContent = text2.slice(0, index++);
         if (index > text2.length) {
           setTimeout(() => {
@@ -36,14 +36,14 @@
         }
       }
       else if (phase === 3) {
-        // Deleting back to "I am "
+        // deleting back to "I am "
         element.textContent = text2.slice(0, --index);
         if (index === 5) {
           phase = 4;
         }
       }
       else if (phase === 4) {
-        // Typing text3
+        // typing text3
         element.textContent = text3.slice(0, index++);
         if (index > text3.length) {
           setTimeout(() => {
@@ -54,7 +54,7 @@
         }
       }
       else if (phase === 5) {
-        // Deleting text3 completely
+        // deleting text3 completely
         element.textContent = text3.slice(0, --index);
         if (index === 0) {
           phase = 0;

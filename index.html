@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Justin Du</title>
+
   <link rel="stylesheet" href="styles.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
-    /* Blinking cursor style */
     #typewriter::after {
       content: '|';
       animation: blink 0.7s infinite;
     }
-    
+
     @keyframes blink {
       0%, 50% { opacity: 1; }
       51%, 100% { opacity: 0; }
     }
   </style>
 </head>
+
 <body>
-  <!-- ===== Navigation ===== -->
+
   <nav>
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="qualifications.html">Qualifications</a>
     <a href="https://drive.google.com/file/d/178G9ou-skgP2t8Orrd4O3j0AGaWp7pd1/view?usp=sharing" target="_blank">Resume</a>
     <a href="service.html">Service</a>
+
     <div class="dropdown">
       <span class="dropbtn">Contact</span>
       <div class="dropdown-content">
@@ -33,17 +41,45 @@
       </div>
     </div>
   </nav>
+
   <main>
-    <header class="hero">
-      <h1>Howdy, I'm Justin Du</h1>
-      <img src="images/fine-guy.jpg" alt="Photo of Justin Du">
-    </header>
-    <!-- ===== Animated Text ===== -->
-    <section>
-      <h3 id="typewriter"></h3>
+
+    <section class="hero-layout">
+
+      <div class="hero-left">
+        <h1>Howdy,</h1>
+        <h3 id="typewriter"></h3>
+        <img src="images/fine-guy.jpg" alt="Photo of Justin Du">
+      </div>
+
+      <div class="hero-right">
+        <h2>Areas of Interest</h2>
+
+        <div class="exploring-grid">
+          <div class="exploring-item">
+            <i class="fa-solid fa-hard-drive"></i>
+            <h3>Systems</h3>
+            <p>File systems, OS concepts, and low-level memory management</p>
+          </div>
+
+          <div class="exploring-item">
+            <i class="fa-solid fa-microchip"></i>
+            <h3>Embedded</h3>
+            <p>Arduino, C/C++, and hardware–software interaction</p>
+          </div>
+
+          <div class="exploring-item">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Hardware</h3>
+            <p>Digital logic, circuit analysis, and electronics debugging</p>
+          </div>
+        </div>
+      </div>
+
     </section>
+
   </main>
-  <!-- ===== Typewriter Script ===== -->
+
   <script src="./scripts/typing_script.js"></script>
 
 </body>
